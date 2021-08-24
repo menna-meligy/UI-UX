@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+body,
+html {
+    font-family: 'Montserrat', arial, sans-serif;
+    height: 100%;
+    margin-left: 0;
+}
+
+body {
+    background: #f4f4f4 url(../imgs/img/background.svg);
+    background-size: cover;
+    margin-left: 10px;
+}
+
+#home-container {
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr .5fr;
+    grid-gap: 10px;
+    grid-template-areas: ". left right .";
+    height: 100%;
+}
+
+h1 {
+    position: absolute;
+    position: absolute;
+    left: 209px;
+    top: 214px;
+    width: 371px;
+    height: 123px;
+}
+
+#inner {
+    grid-area: left;
+    align-self: center;
+    justify-self: center;
+}
+
+#illustration {
+    grid-area: right;
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+}
+
+#logo {
+    width: 130px;
+    margin-bottom: 1.6cm;
+    color: #535353;
+    margin-bottom: .2cm;
+    margin-left: 20px;
+    margin-top: 10px;
+    position: absolute;
+    left: 209px;
+    top: 135px;
+    width: 200px;
+    height: 100px;
+}
+
+p.subtitle {
+    font-size: 1.4em;
+    color: #f4f4f4;
+    margin-top: 0;
+}
+
+.cta {
+    background-color: #09bbe9;
+    padding: 1em;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 2em;
+    display: inline-block;
+    border-radius: 5px;
+    text-decoration: none;
+    position: absolute;
+    left: 292px;
+    top: 260px;
+}
+
+#monitor {
+    margin-left: 50%;
+    margin-bottom: 40px;
+    width: 400px;
+    height: 250px;
+    animation: monitorIn 1s ease-in-out forwards;
+    opacity: 0;
+    position: absolute;
+    left: -58px;
+    top: 150px;
+}
+
+.crypto-icons {
+    position: absolute;
+    width: 10%;
+    top: 59px;
+    right: 27%;
+}
+
+#dash {
+    right: 37%;
+    margin-top: 87px;
+    top: 281px;
+    z-index: 30;
+    animation: chatblips .5s ease-in-out .3s forwards;
+    right: 22%;
+    margin-top: 2px;
+}
+
+#eth {
+    margin-top: 40px;
+    margin-left: 18%;
+    animation: chatblips .5s ease-in-out .7s forwards;
+    z-index: 2;
+    opacity: 0;
+}
+
+#diota {
+    z-index: 30;
+    animation: chatblips .5s ease-in-out .8s forwards;
+    margin-top: 142px;
+    margin-right: 18%;
+}
+
+@keyframes monitorIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes chatblips {
+    0% {
+        letter-spacing: 1em;
+        filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
